@@ -1,82 +1,32 @@
-# Lightweight React Template for KAVIA
+# EduLearn LMS Frontend (React)
 
-This project provides a minimal React template with a clean, modern UI and minimal dependencies.
+A lightweight, frontend-only LMS built with React, vanilla CSS and localStorage persistence. No admin panel, no backend calls.
 
 ## Features
+- Auth (Login/Register) with basic validation and localStorage persistence
+- Dashboard with Continue Learning, Completed, and Recommendations
+- Courses listing and Course Details with lessons and progress
+- Lesson Player with Mark Completed and Next/Previous
+- Quiz module with MCQs, optional 10s per-question timer, and keyboard shortcuts (1-4)
+- Results page with score details and attempts scoreboard
+- Ocean Professional theme (blue/purple/teal) with smooth transitions
+- Responsive layout (Navbar + Sidebar desktop, BottomNav mobile)
 
-- **Lightweight**: No heavy UI frameworks - uses only vanilla CSS and React
-- **Modern UI**: Clean, responsive design with KAVIA brand styling
-- **Fast**: Minimal dependencies for quick loading times
-- **Simple**: Easy to understand and modify
+## Quick Start
+- npm install
+- npm start
 
-## Getting Started
+## Project Structure
+- src/components: Navbar, Sidebar, BottomNav, CourseCard, ProgressBar
+- src/pages: Auth/Login, Auth/Register, Dashboard, Courses, CourseDetails, LessonPlayer, Quiz, Results
+- src/data: Sample courses, lessons, and quizzes
+- src/utils: storage.js (localStorage wrapper), theme.js (ThemeProvider)
+- src/styles: theme.css, layout.css, transitions.css
 
-In the project directory, you can run:
+## Assets
+Place optional thumbnails in `public/assets/`:
+- react.jpg, js.jpg, ui.jpg
 
-### `npm start`
+## Environment
+No backend required. Router uses in-browser navigation.
 
-Runs the app in development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-### `npm test`
-
-Launches the test runner in interactive watch mode.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-## Customization
-
-### Colors
-
-The main brand colors are defined as CSS variables in `src/App.css`:
-
-```css
-:root {
-  --kavia-orange: #E87A41;
-  --kavia-dark: #1A1A1A;
-  --text-color: #ffffff;
-  --text-secondary: rgba(255, 255, 255, 0.7);
-  --border-color: rgba(255, 255, 255, 0.1);
-}
-```
-
-### Components
-
-This template uses pure HTML/CSS components instead of a UI framework. You can find component styles in `src/App.css`. 
-
-Common components include:
-- Buttons (`.btn`, `.btn-large`)
-- Container (`.container`)
-- Navigation (`.navbar`)
-- Typography (`.title`, `.subtitle`, `.description`)
-
-## Learn More
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)

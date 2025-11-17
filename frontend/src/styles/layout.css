@@ -1,0 +1,115 @@
+.app-shell {
+  min-height: 100%;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+}
+.app-body {
+  display: grid;
+  grid-template-columns: 240px 1fr;
+  gap: 16px;
+  padding: 16px;
+}
+@media (max-width: 900px) {
+  .app-body { grid-template-columns: 1fr; }
+}
+
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  background: linear-gradient(180deg, color-mix(in oklab, var(--surface), #fff 4%), var(--surface));
+  border-bottom: 1px solid var(--border);
+  box-shadow: var(--shadow);
+}
+.navbar .inner {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 12px 16px;
+}
+.nav-spacer { flex: 1; }
+.brand {
+  display: flex; align-items: center; gap: 10px; font-weight: 700;
+  color: var(--primary);
+}
+.brand .logo {
+  width: 28px; height: 28px; display: grid; place-items: center;
+  background: radial-gradient(100% 100% at 0% 0%, var(--primary), var(--secondary));
+  color: #fff; border-radius: 8px; box-shadow: var(--shadow);
+}
+
+.sidebar {
+  position: sticky;
+  top: 64px;
+  align-self: start;
+  height: max-content;
+}
+.sidebar .card { padding: 12px; }
+.sidebar a {
+  display: flex; align-items: center; gap: 10px; padding: 10px 12px; border-radius: 8px;
+  color: var(--text);
+}
+.sidebar a.active, .sidebar a:hover {
+  background: color-mix(in oklab, var(--primary), transparent 90%);
+  color: var(--primary);
+}
+
+.bottom-nav {
+  display: none;
+}
+@media (max-width: 900px) {
+  .bottom-nav {
+    display: grid; grid-template-columns: repeat(4,1fr);
+    position: sticky; bottom: 0; background: var(--surface);
+    border-top: 1px solid var(--border);
+  }
+  .bottom-nav a {
+    padding: 10px 4px; text-align: center; color: var(--muted);
+  }
+  .bottom-nav a.active { color: var(--primary); }
+}
+
+.content {
+  padding: 8px;
+}
+.section {
+  margin-bottom: 20px;
+}
+.section h2 {
+  margin: 0 0 12px 0;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+}
+@media (max-width: 1200px) { .grid { grid-template-columns: repeat(2,1fr); } }
+@media (max-width: 700px) { .grid { grid-template-columns: 1fr; } }
+
+.course-card {
+  overflow: hidden;
+}
+.course-card .thumb {
+  aspect-ratio: 16/9; background: linear-gradient(135deg, var(--primary), var(--secondary));
+}
+.course-card .body { padding: 12px; display: grid; gap: 6px; }
+.course-meta { display: flex; gap: 8px; align-items: center; color: var(--muted); font-size: 12px; }
+
+.progress {
+  height: 8px; background: color-mix(in oklab, var(--primary), transparent 92%);
+  border-radius: 999px; overflow: hidden; border: 1px solid var(--border);
+}
+.progress .bar {
+  height: 100%;
+  background: linear-gradient(90deg, var(--teal), var(--primary));
+  transition: width .3s ease;
+}
+
+.kbd {
+  border: 1px solid var(--border);
+  background: color-mix(in oklab, var(--surface), #000 3%);
+  border-radius: 6px;
+  padding: 2px 6px;
+  font-size: 12px;
+}
